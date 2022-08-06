@@ -3,7 +3,7 @@ import logo from "../assets/logo.jpeg";
 export class headerComponent extends Component {
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info">
                 <div class="container-fluid">
                     <img src= {logo} alt="grasshooper" height="34px" />
                     <a class="navbar-brand" href="#">The grasshooper2022</a>
