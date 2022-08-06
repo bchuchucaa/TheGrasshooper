@@ -21,19 +21,19 @@ export class headerComponent extends Component {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Reservas</a>
+                                <a class="nav-link active" aria-current="page" href="/reservas">Reservas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cosas para hacer</a>
+                                <a class="nav-link" href="/actividades">Cosas para hacer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tienda</a>
+                                <a class="nav-link" href="/tienda">Tienda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mapa</a>
+                                <a class="nav-link" href="/mapa">Mapa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
+                                <a class="nav-link" href="/contacto">Contacto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled"
@@ -46,6 +46,6 @@ export class headerComponent extends Component {
             </nav>
         );
     }
-};
+}
 
 export default headerComponent;
