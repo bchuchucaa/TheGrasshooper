@@ -5,7 +5,7 @@ export class HomeComponent extends Component {
         return (
             <div className="container" style={{
                 backgroundImage:
-                    "url('https://img.freepik.com/fotos-premium/crepusculo-oceano-noria-iluminada-parque-atracciones-muelle-playa-santa-monica-estados-unidos_333216-9.jpg')",height:"400px"
+                    "url('https://juragananime.id/gallery/wallpaper/20220709/wonderful-nature-background-hd-desktop-wallpapers-4k-hd,desktop-wallpaper-hd-nature-preview.webp')",height:"400px"
             }}>
                     <h2>BIENVENIDOS A THE GRASSHOOPER 2022</h2>
                     <h1>ES UN GUSTO CONOCERTE..!</h1>

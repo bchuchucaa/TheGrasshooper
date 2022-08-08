@@ -55,8 +55,8 @@ export class ReservasComponent extends Component {
                     <FormGroup>
                         
                         <Label for="exampleSelect">Numero de personas</Label>
-                        <div className="row">
-                            <div className="col-12">
+                        <div className="row justify-content-end">
+                            <div className="col-9">
                             <Input type="select" name="select" id="exampleSelect">
                             <option>1</option>
                             <option>2</option>
