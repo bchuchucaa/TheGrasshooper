@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React, {useEffect, Component } from "react";
 import logo from "../assets/logo.jpeg";
 import { Form, FormGroup, Label, Input, FormFeedback, FormText,Button } from 'reactstrap';
+import Reservaciones from "./ReservacionesComponent";
+
 
 
 export class ReservasComponent extends Component {
+   
     render() {
         return (
             <div className="container">
@@ -83,6 +86,9 @@ export class ReservasComponent extends Component {
                     
                     
                 </Form>
+
+
+                <Reservaciones/>
             </div>
         );
     }
