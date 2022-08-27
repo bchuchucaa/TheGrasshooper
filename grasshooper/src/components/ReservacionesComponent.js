@@ -2,49 +2,49 @@ import React, { useEffect, useState } from "react";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardLink, Button } from "reactstrap";
 
 const Reservaciones = () => {
-    const [reservation, setUser] = useState(null);
+    const [reservations,setReservaciones]=useState([]);
     useEffect(() => {
-        fetch("http://192.168.0.108:8080/Resthooper/Agenda")
+        fetch("http://192.168.0.107:8080/Resthooper/Agenda")
             .then(res => res.json())
             .then((data) => {
-                console.log(data);
-                const reservacion_api = {
-                    ag_id: data[0].ag_id,
-                    ag_fecha: data[0].ag_fecha,
-                    ag_nombre: data[0].ag_nombre,
-                    ag_telefono: data[0].ag_telefono,
-                    ag_personas: data[0].ag_personas
-                }
-                setUser(reservacion_api);
+                console.log(data[0]);
+                
+                setReservaciones(data);
             });
     }, []);
     return (<div>
 
-        {reservation ? (
+        {reservations ? (
             <div>
+                
+                {reservations.map((reservacion)=><h2 key={reservacion.ag_id}>
                 <Card>
                     <CardBody>
                         <CardTitle tag="h5">
-                            {reservation.ag_nombre}
+                            {reservacion.ag_nombre}
                         </CardTitle>
                         <CardSubtitle
                             className="mb-2 text-muted"
                             tag="h6"
                         >
-                            <i className="fa fa-calendar"></i>{reservation.ag_fecha}
+                            <i className="fa fa-calendar"></i>{reservacion.ag_fecha}
                         </CardSubtitle>
                         <CardText>
-                            <i className="fa fa-user"></i> {reservation.ag_personas}
+                            <i className="fa fa-user"></i> {reservacion.ag_personas}
                         </CardText>
                         <CardLink>
-                            <i className="fa fa-phone"></i>{reservation.ag_telefono}
+                            <i className="fa fa-phone"></i>{reservacion.ag_telefono}
 
                         </CardLink>
                     </CardBody>
                 </Card>
 
-                <h1>id:{reservation.ag_id}</h1>
-                <h1>fecha: {reservation.ag_fecha}</h1></div>
+                
+                    
+                    
+                    {reservacion.ag_nombre}</h2>)
+                    }
+                </div>
 
 
         ) : <h1>LOAGIN</h1>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "../assets/logo.jpeg";
 export class HomeComponent extends Component {
     render() {
         return (

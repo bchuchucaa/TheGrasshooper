@@ -1,0 +1,14 @@
+.eventos{
+    background-color: grey;
+    padding: 1rem;
+}
+.eventos li{
+    list-style: none;
+    padding: 1rem;
+    color: white;
+    border-left-color: 2px solid aqua;
+    border-left-style: solid;
+    border-left-width: 3px;
+
+
+}

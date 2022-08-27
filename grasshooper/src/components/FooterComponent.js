@@ -1,14 +1,29 @@
-import React,{ Component } from "react";
-export class FooterComponent extends Component{
-render(){
-    return(
-        <div className="container">
-            <p>Para obtener ayuda con tus vacaciones en The grasshooper, incluyendo las reservaciones de hosteria/paquetes y tickets, llama al (407) 939-5277.
-Puedes hacer reservaciones en línea para restaurantes de GRASSHOOPER WORLD.
-De 7:00 a.m a 11:00 p.m., hora del este. Los Visitantes menores de 18 años de edad deben contar con el permiso de sus padres o tutores para llamar.</p>
-        </div>
+import React, { Component } from "react";
+import '../styles/FooterStyle.css';
+export class FooterComponent extends Component {
+    render() {
+        return (
+        
+                 <div className="footer">
+                <div className="row" >
+                    <div className="col-11 col-md-4">
+                        <h4> Ubicacion</h4>
+                        <h5><span className="fa fa-location-arrow"></span> Juan Jose Flores y Antonio Flor 12-45</h5>
+                    </div>
+                    <div className="col-11 col-md-4">
+                        <h4 className=""> <span className="fa fa-phone">+593 008439843</span></h4>
+                        <span className="fa fa-whatsapp">0094938343</span>
+                    </div>
+                    <div className="col-11 col-md-4">
+                        <h5><span className="fa fa-facebook"></span>The Grasshooper.com</h5><br />
+                        <h5><span className="fa fa-instagram"></span>Grasshooper.inc.com</h5><br />
+                    </div>
 
-    );
-}
+                </div>
+            </div>
+         
+           
+        );
+    }
 }
 export default FooterComponent;

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import chuchucafroy from "../assets/colaboradores/man.webp"
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardLink, Button } from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink, Button } from "reactstrap";
 export class ContactoComponent extends Component {
     render() {
         return (
