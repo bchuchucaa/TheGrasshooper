@@ -1,11 +1,25 @@
+import axios from "axios";
 import { Component } from "react";
 import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, Input } from "reactstrap";
 import '../styles/TiendaStyle.css';
 
 export class TiendaComponent extends Component {
+    state = {
+        products:[]
+    }
+    componentDidMount(){
+        axios.get("https://fakestoreapi.com/products")
+        .then(res => {
+            const products =  res.data;
+            this.setState({products});
+        })
+    }
     render() {
         return (
-            <div className="container">
+            <div className="">
+                 <header class="">
+                    <img src="https://cutewallpaper.org/25/animated-wallpaper-purple/planet-system-002-4k-motion-animated-background-lively-wallpaper-engine-screensaver-pink-blue-purple-on-make-a-gif.gif" width="100%" height="200px"/>
+                 </header>
                 <div className="row">
                     <div className="col-md-2 menu">
                         <div className="row">
@@ -30,26 +44,24 @@ export class TiendaComponent extends Component {
                                 <div className="col-3"><span className="fa fa-check-circle">Disponible</span></div>
                                 <div className="col-3"><span className="fa fa-exclamation-circle">Agotado</span></div>
                             </div>
-                            <div className="col-md-4">
-                                <Card>
+                            
+                            <div className="productos">
+                            { this.state.products.map(product =>   
+                            <Card className="productCard">
                                     <CardBody>
-                                        <CardText>Camiseta redbull</CardText>
-                                        <CardImg src="https://m.media-amazon.com/images/I/61RsJuvWBiL._AC_UX385_.jpg" />
+                                        <CardText>{product.title}</CardText>
+                                        <CardImg src={product.image}/>
                                     </CardBody>
-                                    <CardSubtitle className="mb-2 text-muted" tag="h6">Precio: 6.99$</CardSubtitle>
+                                    <CardSubtitle className="mb-2 text-muted" tag="h6">{product.price}</CardSubtitle>
                                     <Button className="btn-warning">Add to card</Button>
+ 
                                 </Card>
+                            
+                            )}
+                              
+                                
                             </div>
-                            <div className="col-md-4">
-                                <Card>
-                                    <CardBody>
-                                        <CardText>Grasshooper</CardText>
-                                        <CardImg src="https://m.media-amazon.com/images/I/A1KHvCGeH6L._CLa%7C2140%2C2000%7C81%2B4xYarFdL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX342_.png" />
-                                    </CardBody>
-                                    <CardSubtitle className="mb-2 text-muted" tag="h6">Precio: 6.99$</CardSubtitle>
-                                    <Button className="btn-warning">Add to card</Button>
-                                </Card>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
