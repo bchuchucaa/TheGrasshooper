@@ -8,6 +8,7 @@ import TiendaComponent from "./TiendaComponent";
 import MapaComponent from "./MapaComponent";
 import ContactoComponent from "./ContactoComponent";
 import {Routes,Route,Navigate} from 'react-router-dom';
+import RegistroComponent from "./RegistroComponent";
 
 class MainComponent extends Component {
     render() {
@@ -23,7 +24,9 @@ class MainComponent extends Component {
                     <Route exact path="/tienda" element={<TiendaComponent/>}/>
                     <Route exact path="/mapa" element={<MapaComponent/>}/>
                     <Route exact path="/contacto" element={<ContactoComponent/>}/>
+                    <Route exact path="/registro" element={<RegistroComponent/>}/>
                     <Route path="/" element={<Navigate replace to="/home" />} />
+
                 </Routes>
 
                 <Footer />

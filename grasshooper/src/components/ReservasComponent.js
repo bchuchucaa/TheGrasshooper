@@ -48,10 +48,13 @@ function ReservasComponent() {
 
 
     return (
-        <div className="container">
+        <div className="">
             <div className="row" style={{margin:"10px"}}>
                 <div className="col-md-2 eventos">
-                    <h3>Eventos</h3>
+                    <div className="row">
+                    <h4>Eventos</h4>
+                    </div>
+                    
                     <ul>
                         <li class="">
                             <div className="row">
@@ -76,7 +79,7 @@ function ReservasComponent() {
                         </li>
                     </ul>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-8">
                     <h1>Agende su visita</h1>
                     <div className="message">{mensaje ? <p>{mensaje}</p> : null}</div>
 
@@ -141,11 +144,11 @@ function ReservasComponent() {
 
                         </FormGroup>
                         <FormGroup>
-                            <div className="row">
-                                <div className="col-6">
+                            <div className="row justify-content-end ">
+                                <div className="col-4">
                                     <Button type="submit" className="btn btn-warning">Agendar</Button>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-4">
                                     <Button type="submit" className="btn btn-primary">Cancelar</Button>
                                 </div>
                             </div>

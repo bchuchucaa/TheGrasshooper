@@ -18,7 +18,7 @@ export class TiendaComponent extends Component {
         return (
             <div className="">
                  <header class="">
-                    <img src="https://cutewallpaper.org/25/animated-wallpaper-purple/planet-system-002-4k-motion-animated-background-lively-wallpaper-engine-screensaver-pink-blue-purple-on-make-a-gif.gif" width="100%" height="200px"/>
+                    <img src="https://www.insights.la/wp-content/uploads/2015/10/banner_marketing_advertising_agency.jpg" width="100%" height="200px"/>
                  </header>
                 <div className="row">
                     <div className="col-md-2 menu">
