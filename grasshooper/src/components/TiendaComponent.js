@@ -17,9 +17,7 @@ export class TiendaComponent extends Component {
     render() {
         return (
             <div className="">
-                 <header class="">
-                    <img src="https://www.insights.la/wp-content/uploads/2015/10/banner_marketing_advertising_agency.jpg" width="100%" height="200px"/>
-                 </header>
+
                 <div className="row">
                     <div className="col-md-2 menu">
                         <div className="row">
