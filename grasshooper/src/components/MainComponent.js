@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./headerComponent";
-import Home from "./HomeComponent";
+import { HomeComponent } from "./HomeComponent";
 import Footer from "./FooterComponent";
 import ReservasComponent from "./ReservasComponent";
 import ActividadesComponent from "./ActividadesComponent";
@@ -18,7 +18,7 @@ class MainComponent extends Component {
             <div>
                 <Header />
                 <Routes>
-                    <Route path="/home" element={<Home/>}/>
+                    <Route path="/home" element={<HomeComponent/>}/>
                     <Route exact path="/reservas" element={<ReservasComponent/>}/>
                     <Route exact path="/actividades" element={<ActividadesComponent/>}/>
                     <Route exact path="/tienda" element={<TiendaComponent/>}/>
